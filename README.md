@@ -30,7 +30,7 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 | Covid-19 | 404 original + 4848 augmented | 100 | 207 |
 | Normal | 404 original + 4848 augmented | 100 | 207 |
 | Pneumonia | 404 original + 4848 augmented | 100 | 207 |
-| Total | 1212 original + 14544 augmented | 300 | 621 |
+| **Total** | 1212 original + 14544 augmented | 300 | 621 |
 
 :exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
 
@@ -43,7 +43,7 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 | Viral Pneumonia | 404 original + 4848 augmented | 100 | 207 |
 | Covid-19 | 404 original + 4848 augmented | 100 | 207 |
 | Lung Opacity No Pneumonia | 404 original + 4848 augmented | 100 | 223 |
-| Total | 2020 original + 24240 augmented | 500 | 1051 |
+| **Total** | 2020 original + 24240 augmented | 500 | 1051 |
 
 :exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
 
