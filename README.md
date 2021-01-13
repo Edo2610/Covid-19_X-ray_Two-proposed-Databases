@@ -25,25 +25,25 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 
 ### 3-classes dataset
 
-| Class | Train | Val | Test |
+| Class | Train \br original + augmented | Val | Test |
 | ----- | :---: | :-: | :--: |
-| Covid-19 | 404 original + 4848 augmented | 100 | 207 |
-| Normal | 404 original + 4848 augmented | 100 | 207 |
-| Pneumonia | 404 original + 4848 augmented | 100 | 207 |
-| **Total** | 1212 original + 14544 augmented | 300 | 621 |
+| Covid-19 | 404 + 4848 | 100 | 207 |
+| Normal | 404 + 4848 | 100 | 207 |
+| Pneumonia | 404 + 4848 | 100 | 207 |
+| **Total** | 1212 + 14544 | 300 | 621 |
 
 :exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
 
 ### 5-classes dataset
 
-| Class | Train | Val | Test |
+| Class | Train \br original + augmented | Val | Test |
 | ----- | :---: | :-: | :--: |
-| Normal | 404 original + 4848 augmented | 100 | 207 |
-| Bacetial Penumonia | 404 original + 4848 augmented | 100 | 207 |
-| Viral Pneumonia | 404 original + 4848 augmented | 100 | 207 |
-| Covid-19 | 404 original + 4848 augmented | 100 | 207 |
-| Lung Opacity No Pneumonia | 404 original + 4848 augmented | 100 | 223 |
-| **Total** | 2020 original + 24240 augmented | 500 | 1051 |
+| Normal | 404 + 4848 | 100 | 207 |
+| Bacetial Penumonia | 404 + 4848 | 100 | 207 |
+| Viral Pneumonia | 404 + 4848 | 100 | 207 |
+| Covid-19 | 404 + 4848 | 100 | 207 |
+| Lung Opacity No Pneumonia | 404 + 4848 | 100 | 223 |
+| **Total** | 2020 + 24240 | 500 | 1051 |
 
 :exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
 
