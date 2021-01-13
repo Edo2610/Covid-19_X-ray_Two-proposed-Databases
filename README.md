@@ -36,14 +36,14 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 
 ### 5-classes dataset
 
-| Class | Train | Val | Test | Source |
-| ----- | :---: | :-: | :--: | ------ |
-| Normal | 404 original + 4848 augmented | 100 | 207 | [2,3,4] |
-| Bacetial Penumonia | 404 original + 4848 augmented | 100 | 207 | [2,5,6] |
-| Viral Pneumonia | 404 original + 4848 augmented | 100 | 207 | [1,2] |
-| Covid-19 | 404 original + 4848 augmented | 100 | 207 | [1] |
-| Lung Opacity No Pneumonia | 404 original + 4848 augmented | 100 | 223 | [4] |
-| Total | 2020 original + 24240 augmented | 500 | 1051 | - |
+| Class | Train | Val | Test |
+| ----- | :---: | :-: | :--: |
+| Normal | 404 original + 4848 augmented | 100 | 207 |
+| Bacetial Penumonia | 404 original + 4848 augmented | 100 | 207 |
+| Viral Pneumonia | 404 original + 4848 augmented | 100 | 207 |
+| Covid-19 | 404 original + 4848 augmented | 100 | 207 |
+| Lung Opacity No Pneumonia | 404 original + 4848 augmented | 100 | 223 |
+| Total | 2020 original + 24240 augmented | 500 | 1051 |
 
 :exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
 
