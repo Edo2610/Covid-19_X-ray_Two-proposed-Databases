@@ -47,3 +47,17 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 
 :exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
 
+# Contributions
+
+This work was collaboratively conducted by Edoardo Vantaggiato, Fares Bougourzi, Cosimo Distante, Abdelmalik Taleb-Ahmed, Hadid Abdenour.  
+
+## Citation
+```
+@article{prova,
+    title={Two Scenarios Covid-19 Recognition on Chest X-Ray Scans using Ensemble-CNNs approach},
+    author={Edoardo Vantaggiato and Fares Bougourzi and Cosimo Distante and Abdelmalik Taleb-Ahmed and Hadid Abdenour},
+    year={2021},
+    journal={Sensor MDPI},
+    url={https://github.com/Edo2610/Two-Scenarios-Covid-19-Recognition-on-Chest-X-Ray-Scans-using-Ensemble-CNNs-approach}
+}
+```
