@@ -25,7 +25,7 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 
 ### 3-classes dataset
 
-| Class | Train \br original + augmented | Val | Test |
+| Class | Train </br>original + augmented | Val | Test |
 | ----- | :---: | :-: | :--: |
 | Covid-19 | 404 + 4848 | 100 | 207 |
 | Normal | 404 + 4848 | 100 | 207 |
@@ -36,7 +36,7 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 
 ### 5-classes dataset
 
-| Class | Train \br original + augmented | Val | Test |
+| Class | Train </br>original + augmented | Val | Test |
 | ----- | :---: | :-: | :--: |
 | Normal | 404 + 4848 | 100 | 207 |
 | Bacetial Penumonia | 404 + 4848 | 100 | 207 |
