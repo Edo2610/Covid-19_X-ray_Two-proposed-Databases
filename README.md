@@ -53,7 +53,7 @@ This work was collaboratively conducted by Edoardo Vantaggiato, Fares Bougourzi,
 
 ### Citation
 ```
-@article{vantaggiato2021covid,
+@article{somethings,
     title={Two Scenarios Covid-19 Recognition on Chest X-Ray Scans using Ensemble-CNNs approach},
     author={Edoardo Vantaggiato and Fares Bougourzi and Cosimo Distante and Abdelmalik Taleb-Ahmed and Hadid Abdenour},
     year={2021},
