@@ -58,6 +58,6 @@ This work was collaboratively conducted by Edoardo Vantaggiato, Fares Bougourzi,
     author={Edoardo Vantaggiato and Fares Bougourzi and Cosimo Distante and Abdelmalik Taleb-Ahmed and Hadid Abdenour},
     year={2021},
     journal={Sensors MDPI},
-    url={https://github.com/Edo2610/Two-Scenarios-Covid-19-Recognition-on-Chest-X-Ray-Scans-using-Ensemble-CNNs-approach}
+    url={https://github.com/Edo2610/Covid-19_X-ray_Two-proposed-Databases}
 }
 ```
