@@ -1,4 +1,4 @@
-# Two Scenarios Covid-19 Recognition on Chest X-Ray Scans using Ensemble CNNs approach
+# Covid-19 X-ray - Two proposed Databases
 
 University of Salento and IEMN DOAE Université Polytechnique Hauts-de-France  
 Master degree in Computer Engineering  
