@@ -3,7 +3,7 @@
 University of Salento and IEMN DOAE Université Polytechnique Hauts-de-France  
 Master degree in Computer Engineering  
 Supervisor: Cosimo Distante, Abdelmalik Taleb-Ahmed  
-Co-supervisor: Fares Bougourzi, Hadid Abdenour 
+Co-supervisor: Fares Bougourzi, Hadid Abdenour   
 Student: Edoardo Vantaggiato
 
 ___
@@ -32,7 +32,7 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 | Pneumonia | 404 + 4848 | 100 | 207 |
 | **Total** | 1212 + 14544 | 300 | 621 |
 
-:exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
+:exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Tolga, Algeria
 
 ### 5-classes dataset
 
@@ -45,7 +45,7 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 | Lung Opacity No Pneumonia | 404 + 4848 | 100 | 223 |
 | **Total** | 2020 + 24240 | 500 | 1051 |
 
-:exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Algeria
+:exclamation: for class Covid-19, we use as test set unpublished images collected from Hospitals of Tolga, Algeria
 
 ## Contributions
 
