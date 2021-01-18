@@ -71,7 +71,7 @@ def main():
     num_classes = 5
     trained = 'last'
     # test_fold = 1
-    data_dir = os.path.join(workspace, 'Dataset' + str(num_classes))
+    data_dir = os.path.join(workspace, 'Datasets', str(num_classes) + '-classes')
 
     # ResNeXt and DenseNet
     transform0 = transforms.Compose([
@@ -89,7 +89,7 @@ def main():
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 
-    test_dir = os.path.join(data_dir, 'Val')
+    test_dir = os.path.join(data_dir, 'Test')
 
     test_set_0 = datasets.ImageFolder(test_dir, transform0)
     test_set_1 = datasets.ImageFolder(test_dir, transform1)
@@ -97,8 +97,8 @@ def main():
     test_size = len(test_set_0)
     classes = test_set_0.classes
 
-    test_loader0 = torch.utils.data.DataLoader(test_set_0, batch_size=64, shuffle=False, num_workers=0)
-    test_loader1 = torch.utils.data.DataLoader(test_set_1, batch_size=64, shuffle=False, num_workers=0)
+    test_loader0 = torch.utils.data.DataLoader(test_set_0, batch_size=1, shuffle=False, num_workers=0)
+    test_loader1 = torch.utils.data.DataLoader(test_set_1, batch_size=1, shuffle=False, num_workers=0)
 
     loaders = [test_loader0, test_loader1, test_loader0]
 
@@ -146,5 +146,5 @@ def main():
 
 
 if __name__ == "__main__":
-    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     main()

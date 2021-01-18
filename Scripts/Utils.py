@@ -86,21 +86,21 @@ def plot_loss_acc(timestamp, workspace, model_name, optimizer_name, epochs, trai
     # plt.show()
     
 def plot_confusion_matrix(cm, classes, timestamp, workspace, model_name, cmap=plt.cm.Blues, save=True):
-    plt.figure(figsize=(13,11))
+    plt.figure(figsize=(10,10))
     if os.path.isdir(os.path.join(workspace, 'graph')) != True and save == True:
       os.mkdir(os.path.join(workspace, 'graph'))        
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
-    plt.colorbar()
+    #plt.colorbar()
     tick_marks = np.arange(len(classes))
     plt.xticks(tick_marks, classes)
     plt.yticks(tick_marks, classes, rotation=90)
 
     thresh = cm.max() / 2.
     for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-        plt.text(j, i, format(cm[i, j]), horizontalalignment="center", color="white" if cm[i, j] > thresh else "black")
+        plt.text(j, i, format(cm[i, j]) + '\n(' + format(round(cm[i,j]*100/207, 1)) + '%)', fontsize=20, horizontalalignment="center", color="white" if cm[i, j] > thresh else "black")
 
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
+    #plt.ylabel('True label')
+    #plt.xlabel('Predicted label')
     plt.title(model_name)
     if save:
         cm_path = timestamp + '_cm.png'
