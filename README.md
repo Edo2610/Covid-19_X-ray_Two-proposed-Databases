@@ -19,7 +19,7 @@ The recognition of Covid-19 infection from the X-ray images is an emerging field
 | 4 | [A Large Chest X-Ray Dataset - CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) | Apache 2.0 |
 | 5 | [NLM-MontgomerySet](https://lhncbc.nlm.nih.gov/publication/pub9931) | public dataset |
 | 6 | [NLM-ChinaCXRSet](https://lhncbc.nlm.nih.gov/publication/pub9931) | public dataset |
-| 7 | [Algeria Hospital of Tolga](Datasets/5-classes/TTest/Covid-19) | Open Source |
+| 7 | [Algeria Hospital of Tolga](https://github.com/Edo2610/Covid-19_X-ray_Two-proposed-Databases/tree/main/Datasets/5-classes/Test/Covid-19) | Open Source |
 
 
 ## Datasets
