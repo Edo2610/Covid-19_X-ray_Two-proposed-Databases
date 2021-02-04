@@ -16,6 +16,7 @@ import torch.optim as optim
 from torch.optim import lr_scheduler
 from torchvision import transforms, datasets, models
 import torch.nn.functional as F
+from sklearn.metrics import roc_curve, auc
 import adabound
 from matplotlib import pyplot as plt
 from time import sleep
@@ -106,6 +107,36 @@ def plot_confusion_matrix(cm, classes, timestamp, workspace, model_name, cmap=pl
         cm_path = timestamp + '_cm.png'
         plt.savefig(os.path.join(workspace, 'graph', cm_path))
     # plt.show()
+    
+def compute_AUC_scores(y_true, y_pred, labels):
+    """
+    Computes the Area Under the Curve (AUC) from prediction scores
+    y_true.shape  = [n_samples, n_classes]
+    y_preds.shape = [n_samples, n_classes]
+    labels.shape  = [n_classes]
+    """
+    y_true = np.asarray(y_true)
+    y_pred = np.asarray(y_pred)
+    
+    print('roc_auc_score for covid class: ', auc(y_true, y_pred))
+    
+    plt.subplots(1, figsize=(10,10))
+    plt.title('Receiver Operating Characteristic - DecisionTree')
+    
+    for i in range(5):
+        false_positive_rate1, true_positive_rate1, threshold1 = roc_curve(y_true, y_pred, pos_label=i)
+        #print('roc_auc_score for DecisionTree: ', roc_auc_score(y_true, y_pred, multi_class='ovr'))
+        plt.plot(false_positive_rate1, true_positive_rate1)
+    plt.plot([0, 1], ls="--")
+    plt.plot([0, 0], [1, 0] , c=".7"), plt.plot([1, 1] , c=".7")
+    plt.ylabel('True Positive Rate')
+    plt.xlabel('False Positive Rate')
+    plt.show()
+    
+    # AUROC_avg = roc_auc_score(y_true, y_pred, multi_class='ovr')
+    # print('The average AUROC is {AUROC_avg:.4f}'.format(AUROC_avg=AUROC_avg))
+    # for y, pred, label in zip(y_true.transpose(), y_pred.transpose(), labels):
+    #     print('The AUROC of {0:} is {1:.4f}'.format(label, roc_auc_score(y, pred)))
     
 def create_train_log(workspace, train_accs, train_losses, train_f1_list, val_accs, val_losses, val_f1_list, model_name, optimizer_name, criterion_name, lr, momentum, step_size, gamma, num_epochs):
     save_path = os.path.join(workspace, "log")

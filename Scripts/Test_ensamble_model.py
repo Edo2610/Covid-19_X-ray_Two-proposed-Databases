@@ -10,7 +10,7 @@ import torch.nn as nn
 import os
 import numpy as np
 from torchvision import transforms, datasets, models
-from sklearn.metrics import f1_score, confusion_matrix
+from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
 import datetime
 
 import Tester as tester
@@ -96,6 +96,7 @@ def main():
 
     test_size = len(test_set_0)
     classes = test_set_0.classes
+    print(classes)
 
     test_loader0 = torch.utils.data.DataLoader(test_set_0, batch_size=1, shuffle=False, num_workers=0)
     test_loader1 = torch.utils.data.DataLoader(test_set_1, batch_size=1, shuffle=False, num_workers=0)
@@ -122,11 +123,13 @@ def main():
         cms.append(cm)
         outs.append(out)
 
-        utils.plot_confusion_matrix(cm, classes, model_name[i] + '_' + str(num_classes), workspace, model_name[i] + ' - Acc: ' + str(round(test_acc.item(), 3)) + '%', save=False)
+        #utils.plot_confusion_matrix(cm, classes, model_name[i] + '_' + str(num_classes), workspace, model_name[i] + ' - Acc: ' + str(round(test_acc.item(), 3)) + '%', save=False)
         #utils.create_test_log(workspace, cm, test_acc, f1_test, model_name[i], test_fold)
 
+    start = datetime.datetime.now()
     preds, labels, total_correct = predict_with_ensemble(outs, utils.list_toTorch(labels))
-
+    end = datetime.datetime.now()
+    elapsed = end - start
     # for i in range(len(preds)):
     #     if labels[i] == 1 and preds[i] != labels[i]:
     #         sample_fname, _ = test_loader0.dataset.samples[i]
@@ -140,9 +143,12 @@ def main():
     print('\n[INFO] ensemble model testing complete')
     print('- total accuracy = ', total_acc)
     print('- total F1-score = ', total_fscore)
+    print('- elapsed time (microsec) = ', elapsed.microseconds)
+    
+    utils.compute_AUC_scores(labels, preds, classes)
 
     #timestamp = str(datetime.datetime.now()).split('.')[0]
-    utils.plot_confusion_matrix(total_cm, classes, 'ensamble_' + str(num_classes) + '_' + trained, workspace, 'Ensamble - acc: ' + str(round(total_acc.item(),3)) + '%', save=False)
+    #utils.plot_confusion_matrix(total_cm, classes, 'ensamble_' + str(num_classes) + '_' + trained, workspace, 'Ensamble - acc: ' + str(round(total_acc.item(),3)) + '%', save=False)
 
 
 if __name__ == "__main__":
