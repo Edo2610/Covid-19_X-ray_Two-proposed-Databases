@@ -126,11 +126,12 @@ def compute_AUC_scores(y_true, y_pred, labels):
     for i in range(5):
         false_positive_rate1, true_positive_rate1, threshold1 = roc_curve(y_true, y_pred, pos_label=i)
         #print('roc_auc_score for DecisionTree: ', roc_auc_score(y_true, y_pred, multi_class='ovr'))
-        plt.plot(false_positive_rate1, true_positive_rate1)
+        plt.plot(false_positive_rate1, true_positive_rate1, label=labels[i])
     plt.plot([0, 1], ls="--")
     plt.plot([0, 0], [1, 0] , c=".7"), plt.plot([1, 1] , c=".7")
     plt.ylabel('True Positive Rate')
     plt.xlabel('False Positive Rate')
+    plt.legend(loc='lower right', frameon=False)
     plt.show()
     
     # AUROC_avg = roc_auc_score(y_true, y_pred, multi_class='ovr')
