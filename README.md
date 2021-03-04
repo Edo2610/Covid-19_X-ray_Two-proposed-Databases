@@ -54,11 +54,16 @@ This work was collaboratively conducted by Edoardo Vantaggiato, Emanuela Paladin
 
 ### Citation
 ```
-@article{somethings,
-    title={Two Scenarios Covid-19 Recognition on Chest X-Ray Scans using Ensemble-CNNs approach},
-    author={Edoardo Vantaggiato and Emanuela Paladini and Fares Bougourzi and Cosimo Distante and Abdelmalik Taleb-Ahmed and Hadid Abdenour},
-    year={2021},
-    journal={Sensors MDPI},
-    url={https://github.com/Edo2610/Covid-19_X-ray_Two-proposed-Databases}
+@Article{s21051742,
+    AUTHOR = {Vantaggiato, Edoardo and Paladini, Emanuela and Bougourzi, Fares and Distante, Cosimo and Hadid, Abdenour and Taleb-Ahmed, Abdelmalik},
+    TITLE = {COVID-19 Recognition Using Ensemble-CNNs in Two New Chest X-ray Databases},
+    JOURNAL = {Sensors},
+    VOLUME = {21},
+    YEAR = {2021},
+    NUMBER = {5},
+    ARTICLE-NUMBER = {1742},
+    URL = {https://www.mdpi.com/1424-8220/21/5/1742},
+    ISSN = {1424-8220},
+    DOI = {10.3390/s21051742}
 }
 ```
